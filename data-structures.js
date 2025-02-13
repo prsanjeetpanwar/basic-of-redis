@@ -104,6 +104,21 @@ console.log(count)
 
 const CardTwoRank=await client.zRank("cart",JSON.stringify({productid:2,quantity:3}))
 console.log(CardTwoRank)
+
+console.log("                                                                                   ")
+
+//------------------------------------hSet--------------------------------------------------
+
+await client.hSet("user",["name","prsanjeet","email","prsanjeet@gmail.com","age","25","city","bangalore"])
+
+const user=await client.hGetAll("user")
+console.log(user)
+
+console.log("                                                                                   ")
+
+
+
+
     
         
      }
